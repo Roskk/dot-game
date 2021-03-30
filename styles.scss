@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+// colors
+$swatch1: #5d5d5d;
+$swatch2: #04ca1d;
+$swatch3: #003459;
+$swatch4: #00171f;
+
+* {
+  font-family: 'Comic Neue', cursive;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0px;
+  overflow: hidden;
+}
+.game-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.game-controls {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  background: $swatch1;
+  z-index: 10;
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    color: #fff;
+    font-size: 26px;
+}
+
+.difficulty-slider {
+  display: flex;
+  width: 100%;
+  margin-top: 16px;
+  font-size: 18px;
+  color: #fff;
+  input {
+    margin: 0px 10px;
+  }
+}
+
+.button {
+  position: relative;
+  display: block;
+  background: $swatch2;
+  border-color: transparent;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px;
+  font-size: 20px;
+  width: 200px;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+}
+
+// Game Board
+.game-board {
+  position: relative;
+  flex: 1;
+  background: #fff;
+}
+
+.dot {
+  position: absolute;
+  background: var(--level);
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+// Difficulty slider
+.difficulty-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  input[type=range] {
+    -webkit-appearance: none;
+    margin: 10px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 3px;
+    height: 6px;
+    cursor: pointer;
+    outline: none;
+     &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 20px;
+      width: 20px;
+      border-radius: 20px;
+      background: var(--level);
+      cursor: pointer;
+    }
+  }
+}
+// Game Over
+#gameOver {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,.5);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 3rem;
+  color: #fff;
+  z-index: 1000;
+}

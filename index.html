@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html style="--level: #13dd23;">
+  <head>
+    <title>Dot Game</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div class="game-wrapper">
+      <div class="game-controls">
+        <div class="score">
+          <div id="playerScore">0</div>
+          <div class="level">Level <span id="level">1</span></div>
+        </div>
+
+        <button class="button" id="gameButton">Start</button>
+
+        <div class="difficulty-slider">
+          Easy <input name="difficulty" type="range"
+          min="1" max="10" value="1" /> Hard
+        </div>
+      </div>
+
+      <div class="game-board"></div>
+    </div>
+    <div id="gameOver">
+      <div>Game Over</div>
+      <div>Score <span id="finalScore"></span></div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
